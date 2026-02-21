@@ -1,0 +1,19 @@
+# Secrets
+*.json
+*.tfvars
+*.key
+
+# Python
+__pycache__/
+*.pyc
+.env
+
+# Terraform
+.terraform/
+terraform.tfstate*
+*.tfstate
+*.tfstate.backup
+
+# IDE
+.vscode/
+.idea/
