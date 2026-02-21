@@ -1,0 +1,23 @@
+version: 2
+
+sources:
+  - name: raw
+    database: your-project
+    schema: raw
+    tables:
+      - name: clicks
+      - name: orders
+
+models:
+  - name: popular_products
+    description: "Агрегация кликов по товарам за последний час (пример)"
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+      - name: click_count
+  - name: top_products
+    description: "Итоговая витрина с объединением кликов и заказов"
+    columns:
+      - name: product_id
+      - name: score
